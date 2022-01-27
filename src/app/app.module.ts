@@ -16,11 +16,14 @@ import {FormsModule} from "@angular/forms";
 import {FontAwesomeModule} from "@fortawesome/angular-fontawesome";
 import {HttpClientModule} from "@angular/common/http";
 import {NgbModule} from "@ng-bootstrap/ng-bootstrap";
+import { MockBookComponent } from './components/mock-book/mock-book.component';
+import { MockBookItemComponent } from './components/mock-book-item/mock-book-item.component';
 
 const appRoutes: Routes = [
   {path: '', component: HomepageComponent},
   {path: 'books', component: BooksComponent},
   {path: 'about', component: AboutComponent},
+  {path: 'mock', component: MockBookComponent},
 ]
 
 @NgModule({
@@ -32,7 +35,9 @@ const appRoutes: Routes = [
     AboutComponent,
     BooksComponent,
     BookItemComponent,
-    BookSearchComponent
+    BookSearchComponent,
+    MockBookComponent,
+    MockBookItemComponent
   ],
   imports: [
     BrowserModule,
