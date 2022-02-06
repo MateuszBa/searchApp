@@ -1,0 +1,7 @@
+<form class="add-form" (ngSubmit)="onSearchSubmit()">
+    <div class="form-control">
+    <label for="cnt">How many animals you want to find?</label>
+    <input type="number" name="cnt" [(ngModel)]="cnt" id="cnt" placeholder="counter">
+  </div>
+  <input type="submit" value="Generuj" class="btn btn-block" />
+</form>

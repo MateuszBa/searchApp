@@ -1,4 +1,5 @@
 export interface Animal {
+  "cnt"?: number,
   "name": string,
   "latin_name": string,
   "animal_type": string,
@@ -12,5 +13,5 @@ export interface Animal {
   "diet": string,
   "geo_range": string,
   "image_link": string,
-  "id": string,
+  "id": string
 }

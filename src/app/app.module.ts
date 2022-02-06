@@ -18,10 +18,14 @@ import {HttpClientModule} from "@angular/common/http";
 import {NgbModule} from "@ng-bootstrap/ng-bootstrap";
 import { MockBookComponent } from './components/mock-book/mock-book.component';
 import { MockBookItemComponent } from './components/mock-book-item/mock-book-item.component';
+import { AnimalItemComponent } from './components/animal-item/animal-item.component';
+import { AnimalsComponent } from './components/animals/animals.component';
+import { AnimalsSearchComponent } from './components/animals-search/animals-search.component';
 
 const appRoutes: Routes = [
   {path: '', component: HomepageComponent},
   {path: 'books', component: BooksComponent},
+  {path: 'animals', component: AnimalsComponent},
   {path: 'about', component: AboutComponent},
   {path: 'mock', component: MockBookComponent},
 ]
@@ -37,7 +41,10 @@ const appRoutes: Routes = [
     BookItemComponent,
     BookSearchComponent,
     MockBookComponent,
-    MockBookItemComponent
+    MockBookItemComponent,
+    AnimalItemComponent,
+    AnimalsComponent,
+    AnimalsSearchComponent
   ],
   imports: [
     BrowserModule,
