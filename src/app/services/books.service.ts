@@ -25,6 +25,9 @@ export class BooksService {
     if (typeof books["kind"]!= 'undefined' && books["kind"]){
       url = `${url}kinds/${books["kind"].toLowerCase()}/`
     }
+    console.log(this.http.get<Books[]>(`${url}books/`))
+    this.http.get<Books[]>(`${url}books/`).subscribe(data => console.log('success', data),
+      error => alert("Brak danych"))
     return this.http.get<Books[]>(`${url}books/`)
   }
 }

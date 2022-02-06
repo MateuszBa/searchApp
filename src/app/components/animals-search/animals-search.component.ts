@@ -16,6 +16,7 @@ export class AnimalsSearchComponent implements OnInit {
 
 
   onSearchSubmit(){
+
     const newSearchQuery = {
       cnt: this.cnt
     }
