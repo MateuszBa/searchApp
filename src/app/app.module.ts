@@ -21,6 +21,8 @@ import { MockBookItemComponent } from './components/mock-book-item/mock-book-ite
 import { AnimalItemComponent } from './components/animal-item/animal-item.component';
 import { AnimalsComponent } from './components/animals/animals.component';
 import { AnimalsSearchComponent } from './components/animals-search/animals-search.component';
+import { MockAnimalItemComponent } from './components/mock-animal-item/mock-animal-item.component';
+import { MockAnimalsComponent } from './components/mock-animals/mock-animals.component';
 
 const appRoutes: Routes = [
   {path: '', component: HomepageComponent},
@@ -28,6 +30,7 @@ const appRoutes: Routes = [
   {path: 'animals', component: AnimalsComponent},
   {path: 'about', component: AboutComponent},
   {path: 'mock-books', component: MockBookComponent},
+  {path: 'mock-animals', component: MockAnimalsComponent}
 ]
 
 @NgModule({
@@ -44,7 +47,9 @@ const appRoutes: Routes = [
     MockBookItemComponent,
     AnimalItemComponent,
     AnimalsComponent,
-    AnimalsSearchComponent
+    AnimalsSearchComponent,
+    MockAnimalItemComponent,
+    MockAnimalsComponent
   ],
   imports: [
     BrowserModule,
