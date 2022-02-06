@@ -27,7 +27,7 @@ const appRoutes: Routes = [
   {path: 'books', component: BooksComponent},
   {path: 'animals', component: AnimalsComponent},
   {path: 'about', component: AboutComponent},
-  {path: 'mock', component: MockBookComponent},
+  {path: 'mock-books', component: MockBookComponent},
 ]
 
 @NgModule({

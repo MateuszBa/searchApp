@@ -1,3 +1,5 @@
-<div>
+<div [ngClass]="{genre: books.genre}" class="task">
+  <a href="{{books.url}}"><h2>{{books.title}}</h2></a>
   <h3>{{books.author}}</h3>
+  <img src="https://wolnelektury.pl/media/{{books.cover_thumb}}" alt="cover">
 </div>
