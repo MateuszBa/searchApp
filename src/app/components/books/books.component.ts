@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {BooksService} from "../../services/books.service";
 import {Books} from "../../Books";
 
@@ -16,6 +16,16 @@ export class BooksComponent implements OnInit {
   ngOnInit(): void {}
 
   searchBooks(books: Books){
-    this.bookService.getBooks(books).subscribe((books) => this.books = books);
+    if (this.books){
+      localStorage.setItem('lastSearch', JSON.stringify(this.books))
+    }
+    let api_data = this.bookService.getBooks(books)
+    api_data.subscribe((books) => this.books = books);
+
   }
+
+  lastSearch(){
+    this.books = JSON.parse(<string>localStorage.getItem('lastSearch'))
+  }
+
 }

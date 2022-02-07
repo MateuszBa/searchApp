@@ -9,6 +9,7 @@ import {Books} from "../../Books";
 export class BookSearchComponent implements OnInit {
 
   @Output() onSearchBook: EventEmitter<Books> = new EventEmitter();
+  @Output() onLastSearch: EventEmitter<Books> = new EventEmitter();
   author!: string;
   genre!: string;
   epoch!: string;
@@ -34,6 +35,10 @@ export class BookSearchComponent implements OnInit {
     this.genre = '';
     this.epoch = '';
     this.kind = '';
+  }
+
+  onLastSearchClick(){
+    this.onLastSearch.emit()
   }
 
 }
